@@ -1,0 +1,18 @@
+name: get_yinyang
+description: >
+  주어진 천간 또는 지지가 양인지 음인지 반환합니다.
+parameters:
+  type: object
+  properties:
+    value:
+      type: string
+      description: 천간 또는 지지 문자
+      enum: ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸",
+             "子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+  required: ["value"]
+returns:
+  type: object
+  description: yin 또는 yang.
+
+yin_values: ["乙", "丁", "己", "辛", "癸", "丑", "卯", "未", "酉", "亥"]
+yang_values: ["甲", "丙", "戊", "庚", "壬", "子", "寅", "辰", "午", "申", "戌"]

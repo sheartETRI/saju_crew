@@ -1,0 +1,76 @@
+name: get_branch_properties
+description: >
+  각 지지의 기본 속성(오행, 음양, 계절/비고)을 반환합니다.
+parameters:
+  type: object
+  properties:
+    branch:
+      type: string
+      description: 지지(子~亥)
+      enum: ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+  required: ["branch"]
+returns:
+  type: object
+  description: 속성 객체.
+
+branch_properties:
+  - branch: "子"
+    element: "水"
+    yinyang: "양"
+    season: "겨울"
+    notes: "겨울 한복판의 물; 저장과 지혜"
+  - branch: "丑"
+    element: "土"
+    yinyang: "음"
+    season: "겨울"
+    notes: "겨울 습토; 저장된 수기가 스며있음"
+  - branch: "寅"
+    element: "木"
+    yinyang: "양"
+    season: "초봄"
+    notes: "새싹이 트는 봄 시작"
+  - branch: "卯"
+    element: "木"
+    yinyang: "음"
+    season: "봄"
+    notes: "봄의 목; 성장과 방향성"
+  - branch: "辰"
+    element: "土"
+    yinyang: "양"
+    season: "봄"
+    notes: "전환기의 습토; 수·목 혼재"
+  - branch: "巳"
+    element: "火"
+    yinyang: "음"
+    season: "초여름"
+    notes: "초여름의 화; 표현과 확산"
+  - branch: "午"
+    element: "火"
+    yinyang: "양"
+    season: "여름"
+    notes: "한여름의 화; 빛과 활기"
+  - branch: "未"
+    element: "土"
+    yinyang: "음"
+    season: "여름"
+    notes: "여름 말기의 토; 화·목 잔류"
+  - branch: "申"
+    element: "金"
+    yinyang: "양"
+    season: "가을"
+    notes: "가을 초입의 금; 수기로 이어짐"
+  - branch: "酉"
+    element: "金"
+    yinyang: "음"
+    season: "가을"
+    notes: "가을의 금; 결실과 정리"
+  - branch: "戌"
+    element: "土"
+    yinyang: "양"
+    season: "가을"
+    notes: "전환기의 건토; 화·금 혼재"
+  - branch: "亥"
+    element: "水"
+    yinyang: "음"
+    season: "초겨울"
+    notes: "초겨울의 수; 저장과 준비"

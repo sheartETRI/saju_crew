@@ -1,0 +1,21 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_month_branch",
+      "description": "월 번호(1~12)에 대응하는 지지 글자를 반환합니다.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "integer",
+            "description": "월 (1~12)",
+            "minimum": 1,
+            "maximum": 12
+          }
+        },
+        "required": ["month"]
+      }
+    }
+  }
+]

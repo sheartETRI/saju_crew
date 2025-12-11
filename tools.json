@@ -1,48 +1,14 @@
 [
-  {
-    "type": "function",
-    "function": {
-      "name": "get_ganji_traits",
-      "description": "천간/지지 한 글자의 오행·음양·특성을 조회한다.",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "kind": {
-            "type": "string",
-            "enum": ["stem", "branch"],
-            "description": "천간이면 'stem', 지지이면 'branch'."
-          },
-          "code": {
-            "type": "string",
-            "enum": [
-              "甲",
-              "乙",
-              "丙",
-              "丁",
-              "戊",
-              "己",
-              "庚",
-              "辛",
-              "壬",
-              "癸",
-              "子",
-              "丑",
-              "寅",
-              "卯",
-              "辰",
-              "巳",
-              "午",
-              "未",
-              "申",
-              "酉",
-              "戌",
-              "亥"
-            ],
-            "description": "조회할 글자 하나 (예: '乙' 또는 '卯')."
-          }
-        },
-        "required": ["kind", "code"]
-      }
-    }
-  }
+  { "$include": "tools/get_ganji_traits/get_ganji_traits.json" },
+  { "$include": "tools/get_branch_element_strength/get_branch_element_strength.json" },
+  { "$include": "tools/get_branch_interaction/get_branch_interaction.json" },
+  { "$include": "tools/get_branch_month/get_branch_month.json" },
+  { "$include": "tools/get_month_branch/get_month_branch.json" },
+  { "$include": "tools/get_branch_properties/get_branch_properties.json" },
+  { "$include": "tools/get_element_interpretation_contextual/get_element_interpretation_contextual.json" },
+  { "$include": "tools/get_element_profile/get_element_profile.json" },
+  { "$include": "tools/get_five_element_relation/get_five_element_relation.json" },
+  { "$include": "tools/get_hidden_stems/get_hidden_stems.json" },
+  { "$include": "tools/get_stem_purpose/get_stem_purpose.json" },
+  { "$include": "tools/get_yinyang/get_yinyang.json" }
 ]

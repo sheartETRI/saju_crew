@@ -1,0 +1,49 @@
+name: get_element_interpretation_contextual
+description: >
+  오행(또는 해당 천간)을 맥락별로 짧게 해석합니다.
+parameters:
+  type: object
+  properties:
+    stem_or_element:
+      type: string
+      description: 천간(甲~癸) 또는 오행(목·화·토·금·수)
+      enum: ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸", "木", "火", "土", "金", "水"]
+    context:
+      type: string
+      description: "맥락 키워드 (예: season, career, relationship, health)."
+  required: ["stem_or_element", "context"]
+returns:
+  type: object
+  description: 해석 텍스트와 사용 가능한 맥락 목록.
+
+interpretations:
+  "木":
+    default: "성장, 확장, 방향 설정."
+    season: "봄과 어울림; 발아와 시작."
+    career: "기획, 전략, 교육, 연구·조직 역할."
+    relationship: "직설적 소통, 꾸준한 양육."
+    health: "간/근육; 스트레칭과 규칙적 활동."
+  "火":
+    default: "표현, 열정, 조명."
+    season: "여름과 어울림; 가시성과 활력."
+    career: "커뮤니케이션, 디자인, 세일즈, 퍼포먼스."
+    relationship: "따뜻하고 직접적; 분위기를 이끈다."
+    health: "심장/순환; 과열·번아웃 관리."
+  "土":
+    default: "안정, 중재, 완충."
+    season: "전환기의 토; 균형과 중심 잡기."
+    career: "운영, 관리, 재무, 중재."
+    relationship: "신뢰 구축, 포용적 태도."
+    health: "소화/면역; 규칙적 식사와 휴식."
+  "金":
+    default: "구조, 규율, 결정."
+    season: "가을의 선명함; 수확과 정리."
+    career: "법무, QA, 데이터, 보안, 컴플라이언스."
+    relationship: "원칙적이고 명확; 신뢰 중시."
+    health: "폐/피부; 긴장 완화와 건조 관리."
+  "水":
+    default: "흐름, 지혜, 연결."
+    season: "겨울의 저장; 통찰과 보존."
+    career: "연구, 컨설팅, IT/데이터, 물류, 해외."
+    relationship: "유연한 경청, 네트워크 능력."
+    health: "신장/방광; 수분과 회복."

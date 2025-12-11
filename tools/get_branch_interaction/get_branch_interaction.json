@@ -1,0 +1,25 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_branch_interaction",
+      "description": "두 지지의 대표 관계(합/충/형/파/해)를 반환합니다.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "branch1": {
+            "type": "string",
+            "description": "첫 번째 지지",
+            "enum": ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+          },
+          "branch2": {
+            "type": "string",
+            "description": "두 번째 지지",
+            "enum": ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+          }
+        },
+        "required": ["branch1", "branch2"]
+      }
+    }
+  }
+]

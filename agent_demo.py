@@ -7,19 +7,18 @@ Usage:
 """
 
 import json
-from pathlib import Path
-from typing import Dict, List
+from typing import Callable, Dict, List
 
 from openai import OpenAI
 
-from get_traits import get_ganji_traits
+from tools import TOOL_REGISTRY, load_tool_specs
 
 client = OpenAI()
 
 
 def load_tools(tools_path: str = "tools.json") -> List[Dict]:
-    """Load the tool schema from a JSON file."""
-    return json.loads(Path(tools_path).read_text(encoding="utf-8"))
+    """Load the tool schema (supports $include for per-tool spec files)."""
+    return load_tool_specs(tools_path)
 
 
 TOOLS: List[Dict] = load_tools()
@@ -28,9 +27,10 @@ TOOLS: List[Dict] = load_tools()
 def handle_tool_call(tool_name: str, raw_arguments: str) -> Dict:
     """Dispatch the tool call to the local lookup functions."""
     args = json.loads(raw_arguments)
-    if tool_name == "get_ganji_traits":
-        return get_ganji_traits(args["kind"], args["code"])
-    return {"error": f"Unknown tool: {tool_name}"}
+    fn: Callable | None = TOOL_REGISTRY.get(tool_name)
+    if not fn:
+        return {"error": f"Unknown tool: {tool_name}"}
+    return fn(**args)
 
 
 def run_agent(question: str, model: str = "gpt-4o-mini") -> str:

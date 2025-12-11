@@ -1,0 +1,27 @@
+name: get_month_branch
+description: >
+  월 번호(1~12)에 대응하는 지지를 반환합니다. 예: 1 -> 寅, 8 -> 酉.
+parameters:
+  type: object
+  properties:
+    month:
+      type: integer
+      description: 월 번호(1~12)
+  required: ["month"]
+returns:
+  type: object
+  description: 대응하는 지지.
+
+month_to_branch_map:
+  1: "寅"
+  2: "卯"
+  3: "辰"
+  4: "巳"
+  5: "午"
+  6: "未"
+  7: "申"
+  8: "酉"
+  9: "戌"
+  10: "亥"
+  11: "子"
+  12: "丑"

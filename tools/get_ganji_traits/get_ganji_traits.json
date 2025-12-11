@@ -1,0 +1,48 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_ganji_traits",
+      "description": "천간/지지 한 글자의 오행·음양·특성을 조회한다.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["stem", "branch"],
+            "description": "천간이면 'stem', 지지이면 'branch'."
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "甲",
+              "乙",
+              "丙",
+              "丁",
+              "戊",
+              "己",
+              "庚",
+              "辛",
+              "壬",
+              "癸",
+              "子",
+              "丑",
+              "寅",
+              "卯",
+              "辰",
+              "巳",
+              "午",
+              "未",
+              "申",
+              "酉",
+              "戌",
+              "亥"
+            ],
+            "description": "조회할 글자 하나 (예: '乙' 또는 '卯')."
+          }
+        },
+        "required": ["kind", "code"]
+      }
+    }
+  }
+]

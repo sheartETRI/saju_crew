@@ -1,0 +1,66 @@
+name: get_stem_purpose
+description: >
+  각 천간의 용도/균형을 위한 추천·주의 오행을 제공합니다.
+parameters:
+  type: object
+  properties:
+    stem:
+      type: string
+      description: 천간(甲~癸)
+      enum: ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
+  required: ["stem"]
+returns:
+  type: object
+  description: 목적/추천/주의 정보.
+
+stem_purpose:
+  - stem: "甲"
+    purpose: "새싹처럼 시작하고 자라기"
+    notes: ["장기 계획과 방향 설정에 유리", "금이 과하면 과도한 경직 주의"]
+    recommend: ["水", "木"]
+    avoid: ["金"]
+  - stem: "乙"
+    purpose: "덩굴처럼 유연하게 뻗기"
+    notes: ["협업·조율에 강점", "습한 토가 많으면 침체 주의"]
+    recommend: ["水", "木", "火"]
+    avoid: ["土"]
+  - stem: "丙"
+    purpose: "태양처럼 비추고 드러내기"
+    notes: ["표현·가시화가 중요", "수 부족 시 과열 주의"]
+    recommend: ["木", "火", "土"]
+    avoid: ["水"]
+  - stem: "丁"
+    purpose: "등불처럼 따뜻하게 지속"
+    notes: ["섬세한 표현·케어", "수 부족 시 번아웃 주의"]
+    recommend: ["木", "火", "土"]
+    avoid: ["水"]
+  - stem: "戊"
+    purpose: "산처럼 중심을 잡고 지탱"
+    notes: ["신뢰·중재 역할", "목·수 부족 시 경직 가능"]
+    recommend: ["火", "土", "金"]
+    avoid: ["木", "水"]
+  - stem: "己"
+    purpose: "밭처럼 길러내고 조율"
+    notes: ["완충·양육·조정", "과도한 수는 침체 유발"]
+    recommend: ["火", "土", "木"]
+    avoid: ["水"]
+  - stem: "庚"
+    purpose: "단단한 결단과 구조화"
+    notes: ["분석·정리·결정", "화가 많으면 과격·과열"]
+    recommend: ["土", "金", "水"]
+    avoid: ["火"]
+  - stem: "辛"
+    purpose: "정교한 정제와 균형"
+    notes: ["디테일·품질 관리", "화가 많으면 예민/피로"]
+    recommend: ["土", "金", "水"]
+    avoid: ["火"]
+  - stem: "壬"
+    purpose: "큰물처럼 흐르고 연결"
+    notes: ["통찰·연결·확장", "토가 많으면 답답, 금이 과하면 흐름 제한"]
+    recommend: ["水", "木", "火"]
+    avoid: ["土"]
+  - stem: "癸"
+    purpose: "이슬처럼 스며들며 성장"
+    notes: ["섬세한 지원과 회복", "화가 많으면 증발, 토가 많으면 정체"]
+    recommend: ["水", "木", "土"]
+    avoid: ["火"]

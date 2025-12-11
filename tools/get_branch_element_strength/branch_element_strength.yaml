@@ -1,0 +1,93 @@
+name: get_branch_element_strength
+description: >
+  지지/오행 조합에 대한 계절적 세기를 반환합니다.
+  범위: strong, high, medium, weak, growing.
+parameters:
+  type: object
+  properties:
+    branch:
+      type: string
+      description: 지지(子~亥)
+      enum: ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+    element:
+      type: string
+      description: 오행(목·화·토·금·수)
+      enum: ["木", "火", "土", "金", "水"]
+  required: ["branch", "element"]
+returns:
+  type: object
+  description: 강도 결과 텍스트.
+
+strength_map:
+  "子":
+    "水": "strong"
+    "木": "growing"
+    "火": "weak"
+    "土": "weak"
+    "金": "medium"
+  "丑":
+    "土": "strong"
+    "水": "high"
+    "金": "medium"
+    "木": "weak"
+    "火": "weak"
+  "寅":
+    "木": "strong"
+    "火": "high"
+    "土": "medium"
+    "金": "weak"
+    "水": "growing"
+  "卯":
+    "木": "strong"
+    "火": "high"
+    "土": "medium"
+    "金": "weak"
+    "水": "growing"
+  "辰":
+    "土": "strong"
+    "木": "high"
+    "水": "medium"
+    "火": "weak"
+    "金": "weak"
+  "巳":
+    "火": "strong"
+    "土": "high"
+    "木": "medium"
+    "金": "weak"
+    "水": "weak"
+  "午":
+    "火": "strong"
+    "土": "high"
+    "木": "medium"
+    "金": "weak"
+    "水": "weak"
+  "未":
+    "土": "strong"
+    "火": "high"
+    "木": "medium"
+    "金": "weak"
+    "水": "weak"
+  "申":
+    "金": "strong"
+    "水": "high"
+    "土": "medium"
+    "木": "weak"
+    "火": "weak"
+  "酉":
+    "金": "strong"
+    "土": "high"
+    "水": "medium"
+    "木": "weak"
+    "火": "weak"
+  "戌":
+    "土": "strong"
+    "火": "high"
+    "金": "medium"
+    "木": "weak"
+    "水": "weak"
+  "亥":
+    "水": "strong"
+    "木": "high"
+    "金": "medium"
+    "火": "weak"
+    "土": "weak"

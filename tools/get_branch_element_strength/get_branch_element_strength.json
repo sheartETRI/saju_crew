@@ -1,0 +1,25 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_branch_element_strength",
+      "description": "지지(띠)와 특정 오행의 강약을 반환합니다. 결과: 왕성/강/중간/쇠약/생.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "branch": {
+            "type": "string",
+            "description": "지지 (子~亥)",
+            "enum": ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+          },
+          "element": {
+            "type": "string",
+            "description": "오행 (목/화/토/금/수)",
+            "enum": ["木", "火", "土", "金", "水"]
+          }
+        },
+        "required": ["branch", "element"]
+      }
+    }
+  }
+]

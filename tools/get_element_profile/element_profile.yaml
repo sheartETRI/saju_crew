@@ -1,0 +1,36 @@
+name: get_element_profile
+description: >
+  오행별 기본 성향과 추천 키워드/행동을 제공합니다.
+parameters:
+  type: object
+  properties:
+    element:
+      type: string
+      description: 오행(목·화·토·금·수)
+      enum: ["木", "火", "土", "金", "水"]
+  required: ["element"]
+returns:
+  type: object
+  description: 성향, 키워드, 추천 행동.
+
+profiles:
+  - element: "木"
+    traits: "성장, 확장, 방향성."
+    keywords: ["기획", "전략", "교육", "연구", "조직화"]
+    recommends: ["장기 계획 수립", "피드백 루프 설계", "체계적 학습"]
+  - element: "火"
+    traits: "표현, 열정, 가시화."
+    keywords: ["커뮤니케이션", "디자인", "세일즈", "공연", "리더십"]
+    recommends: ["발표/공유 늘리기", "에너지 관리", "가시성 높이기"]
+  - element: "土"
+    traits: "안정, 중재, 완충."
+    keywords: ["운영", "관리", "재무", "중재", "지원"]
+    recommends: ["리스크 관리", "프로세스 정비", "밸런스 체크"]
+  - element: "金"
+    traits: "구조, 규율, 결정."
+    keywords: ["법무", "QA", "데이터", "보안", "정책"]
+    recommends: ["기준/정책 수립", "데이터 기반 결정", "클린업 작업"]
+  - element: "水"
+    traits: "흐름, 지혜, 연결."
+    keywords: ["연구", "컨설팅", "IT/데이터", "물류", "해외"]
+    recommends: ["리서치 강화", "네트워킹/협업", "회복·휴식 확보"]

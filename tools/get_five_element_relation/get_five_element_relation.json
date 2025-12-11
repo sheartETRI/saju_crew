@@ -1,0 +1,25 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_five_element_relation",
+      "description": "두 오행이 상생인지 상극인지, 아니면 동류인지 반환합니다.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "첫 번째 오행 (목/화/토/금/수)",
+            "enum": ["木", "火", "土", "金", "水"]
+          },
+          "target": {
+            "type": "string",
+            "description": "두 번째 오행 (목/화/토/금/수)",
+            "enum": ["木", "火", "土", "金", "水"]
+          }
+        },
+        "required": ["source", "target"]
+      }
+    }
+  }
+]

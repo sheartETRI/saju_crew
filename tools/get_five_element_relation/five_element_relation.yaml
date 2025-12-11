@@ -1,0 +1,32 @@
+name: get_five_element_relation
+description: >
+  두 오행이 생/극/동류(같음) 관계인지 판별합니다.
+parameters:
+  type: object
+  properties:
+    source:
+      type: string
+      description: 첫 번째 오행(목·화·토·금·수)
+      enum: ["木", "火", "土", "金", "水"]
+    target:
+      type: string
+      description: 두 번째 오행(목·화·토·금·수)
+      enum: ["木", "火", "土", "金", "水"]
+  required: ["source", "target"]
+returns:
+  type: object
+  description: 관계 이름.
+
+relations:
+  "생":
+    "木": "火"
+    "火": "土"
+    "土": "金"
+    "金": "水"
+    "水": "木"
+  "극":
+    "木": "土"
+    "火": "金"
+    "土": "水"
+    "金": "木"
+    "水": "火"

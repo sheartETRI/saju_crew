@@ -1,0 +1,40 @@
+name: get_hidden_stems
+description: >
+  각 지지에 포함된 장간(숨은 천간)을 반환합니다.
+parameters:
+  type: object
+  properties:
+    branch:
+      type: string
+      description: 지지(子~亥)
+      enum: ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+  required: ["branch"]
+returns:
+  type: object
+  description: 장간 배열.
+
+hidden_stems:
+  - branch: "子"
+    stems: ["壬"]
+  - branch: "丑"
+    stems: ["己", "癸", "辛"]
+  - branch: "寅"
+    stems: ["甲", "丙", "戊"]
+  - branch: "卯"
+    stems: ["乙"]
+  - branch: "辰"
+    stems: ["戊", "乙", "癸"]
+  - branch: "巳"
+    stems: ["丙", "戊", "庚"]
+  - branch: "午"
+    stems: ["丁", "己"]
+  - branch: "未"
+    stems: ["己", "丁", "乙"]
+  - branch: "申"
+    stems: ["庚", "壬", "戊"]
+  - branch: "酉"
+    stems: ["辛"]
+  - branch: "戌"
+    stems: ["戊", "辛", "丁"]
+  - branch: "亥"
+    stems: ["壬", "甲"]

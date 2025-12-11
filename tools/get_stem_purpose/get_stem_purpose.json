@@ -1,0 +1,20 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_stem_purpose",
+      "description": "천간별 추천 용도와 보완·주의할 오행을 반환합니다.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "stem": {
+            "type": "string",
+            "description": "천간 (甲~癸)",
+            "enum": ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
+          }
+        },
+        "required": ["stem"]
+      }
+    }
+  }
+]
