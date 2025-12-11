@@ -183,15 +183,13 @@ def _sample_inputs() -> Dict[str, Dict[str, Any]]:
         "get_ganji_traits": {"kind": "stem", "code": STEMS[0]},
         "get_branch_element_strength": {"branch": BRANCHES[0], "element": ELEMENTS[0]},
         "get_branch_interaction": {"branch1": BRANCHES[0], "branch2": BRANCHES[1]},
-        "get_branch_month": {"branch": BRANCHES[0]},
-        "get_month_branch": {"month": 1},
+        "get_month_branch": {"branch": BRANCHES[0]},
         "get_branch_properties": {"branch": BRANCHES[0]},
         "get_element_interpretation_contextual": {"stem_or_element": ELEMENTS[0], "context": "default"},
         "get_element_profile": {"element": ELEMENTS[0]},
         "get_five_element_relation": {"source": ELEMENTS[0], "target": ELEMENTS[1]},
         "get_hidden_stems": {"branch": BRANCHES[0]},
         "get_stem_purpose": {"stem": STEMS[0]},
-        "get_yinyang": {"value": STEMS[0]},
     }
 
 

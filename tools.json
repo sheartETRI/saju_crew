@@ -2,13 +2,11 @@
   { "$include": "tools/get_ganji_traits/get_ganji_traits.json" },
   { "$include": "tools/get_branch_element_strength/get_branch_element_strength.json" },
   { "$include": "tools/get_branch_interaction/get_branch_interaction.json" },
-  { "$include": "tools/get_branch_month/get_branch_month.json" },
   { "$include": "tools/get_month_branch/get_month_branch.json" },
   { "$include": "tools/get_branch_properties/get_branch_properties.json" },
   { "$include": "tools/get_element_interpretation_contextual/get_element_interpretation_contextual.json" },
   { "$include": "tools/get_element_profile/get_element_profile.json" },
   { "$include": "tools/get_five_element_relation/get_five_element_relation.json" },
   { "$include": "tools/get_hidden_stems/get_hidden_stems.json" },
-  { "$include": "tools/get_stem_purpose/get_stem_purpose.json" },
-  { "$include": "tools/get_yinyang/get_yinyang.json" }
+  { "$include": "tools/get_stem_purpose/get_stem_purpose.json" }
 ]

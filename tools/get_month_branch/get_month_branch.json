@@ -3,18 +3,22 @@
     "type": "function",
     "function": {
       "name": "get_month_branch",
-      "description": "월 번호(1~12)에 대응하는 지지 글자를 반환합니다.",
+      "description": "Look up the earthly branch for a month number (1-12) or the month number for an earthly branch.",
       "parameters": {
         "type": "object",
         "properties": {
           "month": {
             "type": "integer",
-            "description": "월 (1~12)",
+            "description": "Month number (1-12). Provide either this or branch.",
             "minimum": 1,
             "maximum": 12
+          },
+          "branch": {
+            "type": "string",
+            "description": "Earthly branch code (e.g., \u5b50, \u4e11, \u5bc5). Provide either this or month.",
+            "enum": ["\u5b50", "\u4e11", "\u5bc5", "\u536f", "\u8fb0", "\u5df3", "\u5348", "\u672a", "\u7533", "\u9149", "\u620c", "\u4ea5"]
           }
-        },
-        "required": ["month"]
+        }
       }
     }
   }
